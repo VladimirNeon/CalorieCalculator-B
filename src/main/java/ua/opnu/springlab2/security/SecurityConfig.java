@@ -36,7 +36,7 @@ public class SecurityConfig {
                 .exceptionHandling(exception -> exception.authenticationEntryPoint(authEntryPoint))
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(authorize -> authorize
-                        .requestMatchers("/**").permitAll() // Дозволено для всіх
+                        .requestMatchers("/api/auth/**").permitAll() // Дозволено для всіх
                         .requestMatchers(HttpMethod.GET, "/admin/**").hasRole("Admin") // Тільки для Admin
                         .requestMatchers(HttpMethod.DELETE, "/admin/**").hasRole("Admin") // Тільки для Admin
                         .anyRequest().authenticated())

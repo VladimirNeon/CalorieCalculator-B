@@ -10,7 +10,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
   datasource:
-    url: jdbc:postgresql://localhost:5432/
+    url: jdbc:postgresql://junction.proxy.rlwy.net:43795/railway
     username: postgres
-    password: 123
+    password: GgGNOxbBgBmrtFxcdWZSgEemMoTmBkGO
     driverClassName: org.postgresql.Driver
